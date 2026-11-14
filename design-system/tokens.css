@@ -1,0 +1,185 @@
+/* ============================================================
+   Design System Tokens
+   Drop into any page that wants the Personal Finance look.
+   ============================================================ */
+:root {
+  /* Surfaces */
+  --bg: #ffffff;
+  --bg-sidebar: #f9f9f9;
+  --bg-sunken: #f4f4f4;
+  --bg-hover: #ececec;
+  --bg-active: #e3e3e3;
+  --bg-pill: #ffffff;
+
+  /* Text */
+  --text: #0d0d0d;
+  --text-secondary: #5d5d5d;
+  --text-tertiary: #8e8e8e;
+  --text-placeholder: #b4b4b4;
+
+  /* Borders */
+  --border: #e5e5e5;
+  --border-strong: #d4d4d4;
+  --border-soft: #ececec;
+
+  /* Accent — primary action (black, like ChatGPT send) */
+  --accent: #0d0d0d;
+  --accent-text: #ffffff;
+  --link: #0d0d0d;
+
+  /* Greens — performance / investments / positive */
+  --g-900: #064e3b;
+  --g-800: #065f46;
+  --g-700: #166534;
+  --g-600: #16a34a;
+  --g-500: #22c55e;
+  --g-400: #4ade80;
+  --g-300: #86efac;
+  --g-200: #bbf7d0;
+  --g-100: #dcfce7;
+  --g-050: #f0fdf4;
+
+  /* Blues — cash / banking — full scale */
+  --b-900: #1e3a8a;
+  --b-800: #1d4ed8;
+  --b-700: #2563eb;
+  --b-600: #3b82f6;
+  --b-500: #60a5fa;
+  --b-400: #93c5fd;
+  --b-300: #bfdbfe;
+  --b-200: #dbeafe;
+  --b-100: #eff6ff;
+
+  /* Teal — high-yield savings / fixed deposit / FX */
+  --t-900: #134e4a;
+  --t-800: #115e59;
+  --t-700: #0f766e;
+  --t-600: #0d9488;
+  --t-500: #14b8a6;
+  --t-400: #2dd4bf;
+  --t-300: #5eead4;
+  --t-200: #99f6e4;
+  --t-100: #ccfbf1;
+
+  /* Violet — crypto / digital wallets */
+  --v-900: #4c1d95;
+  --v-800: #5b21b6;
+  --v-700: #6d28d9;
+  --v-600: #7c3aed;
+  --v-500: #8b5cf6;
+  --v-400: #a78bfa;
+  --v-300: #c4b5fd;
+  --v-200: #ddd6fe;
+  --v-100: #ede9fe;
+
+  /* Amber — credit cards / rewards */
+  --a-900: #78350f;
+  --a-800: #92400e;
+  --a-700: #b45309;
+  --a-600: #d97706;
+  --a-500: #f59e0b;
+  --a-400: #fbbf24;
+  --a-300: #fcd34d;
+  --a-200: #fde68a;
+  --a-100: #fef3c7;
+
+  /* Slate — retirement / pension / EPF */
+  --s-900: #0f172a;
+  --s-800: #1e293b;
+  --s-700: #334155;
+  --s-600: #475569;
+  --s-500: #64748b;
+  --s-400: #94a3b8;
+  --s-300: #cbd5e1;
+  --s-200: #e2e8f0;
+  --s-100: #f1f5f9;
+
+  /* Reds — losses / downtrends — full scale */
+  --r-900: #7f1d1d;
+  --r-800: #991b1b;
+  --r-700: #b91c1c;
+  --r-600: #dc2626;
+  --r-500: #ef4444;
+  --r-400: #f87171;
+  --r-300: #fca5a5;
+  --r-200: #fecaca;
+  --r-100: #fee2e2;
+
+  /* Functional */
+  --positive: #16a34a;
+  --positive-strong: #15803d;
+  --positive-bg: #dcfce7;
+  --negative: #dc2626;
+  --negative-strong: #b91c1c;
+  --negative-bg: #fee2e2;
+
+  /* ── Semantic layer ─────────────────────────────────────────
+     Components read these roles, never the raw ramps above. Retinting
+     the app means editing this block only. */
+
+  /* Asset classes — charts, allocation strip, type swatches */
+  --cls-investment: var(--g-600);
+  --cls-retirement: var(--s-500);
+  --cls-property:   var(--t-500);
+  --cls-cash:       var(--b-500);
+  --cls-other:      var(--a-500);
+  --cls-liability:  var(--r-500);
+
+  /* Direction (alias of --positive/--negative, shorter for charts) */
+  --up: var(--positive);
+  --up-bg: var(--positive-bg);
+  --down: var(--negative);
+  --down-bg: var(--negative-bg);
+
+  /* Data freshness — how old a balance is */
+  --fresh: var(--g-500);   /* < 7 days  */
+  --aging: var(--a-500);   /* 7–30 days */
+  --stale: var(--r-600);   /* > 30 days */
+
+  /* Spacing — 4pt scale */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+
+  /* Motion — three durations, one easing */
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --dur-1: 120ms;  /* hover, press */
+  --dur-2: 220ms;  /* expand, toggle */
+  --dur-3: 420ms;  /* chart / bar growth */
+
+  /* Focus ring — replaces browser default, visible on any surface */
+  --focus-ring: 0 0 0 2px var(--bg), 0 0 0 4px var(--text);
+
+  /* Radii */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-card: 20px;
+  --r-xl: 24px;
+  --r-pill: 999px;
+
+  /* Shadows */
+  --shadow-pop: 0 1px 2px rgba(0,0,0,0.04), 0 6px 24px rgba(0,0,0,0.06);
+  --shadow-input: 0 1px 0 rgba(0,0,0,0.02);
+
+  /* Liquid Glass — the floating navigation layer only (tab bar, nav buttons, floating
+     bars). Never on content. Blur is fixed at blur(20px) saturate(180%) in .glass:
+     Safari ignores var() inside -webkit-backdrop-filter. */
+  --glass-fill: rgba(255,255,255,0.66);        /* frosted white over the blurred backdrop */
+  --glass-fill-solid: rgba(255,255,255,0.96);  /* no backdrop-filter / high contrast */
+  --glass-edge: rgba(0,0,0,0.07);              /* hairline so glass reads on white */
+  --glass-rim: rgba(255,255,255,0.95);         /* specular highlight along the top edge */
+  --glass-shadow: 0 10px 30px -8px rgba(0,0,0,0.20), 0 2px 8px -2px rgba(0,0,0,0.08);
+  --glass-platter: rgba(0,0,0,0.07);           /* selected item inside a glass bar */
+  --glass-lens: rgba(255,255,255,0.55);        /* platter while pressed / dragged */
+  --spring: cubic-bezier(.34, 1.36, .64, 1);   /* glass moves with a small overshoot */
+  --dur-glass: 460ms;
+
+  /* Type */
+  --font-sans: "Geist", "Söhne", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
